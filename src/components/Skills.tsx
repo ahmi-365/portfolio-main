@@ -1,13 +1,13 @@
-import { Palette, Layers, Figma, Smartphone, Code, Sparkles } from "lucide-react";
+import { Palette, PenTool, Video, Instagram, FileText, Image } from "lucide-react";
 
 const Skills = () => {
   const skills = [
     { name: "Adobe Photoshop", level: 95, icon: Palette },
-    { name: "Adobe Illustrator", level: 92, icon: Layers },
-    { name: "Figma", level: 90, icon: Figma },
-    { name: "UI/UX Design", level: 88, icon: Smartphone },
-    { name: "Web Design", level: 85, icon: Code },
-    { name: "Creative Direction", level: 90, icon: Sparkles },
+    { name: "Adobe Illustrator", level: 92, icon: PenTool },
+    { name: "Video Editing", level: 88, icon: Video },
+    { name: "Social Media Design", level: 90, icon: Instagram },
+    { name: "Logo & Flyer Design", level: 93, icon: FileText },
+    { name: "Poster & Banner Design", level: 91, icon: Image },
   ];
 
   return (
@@ -60,14 +60,14 @@ const Skills = () => {
           <h3 className="text-2xl font-bold mb-6">Additional Expertise</h3>
           <div className="flex flex-wrap gap-3 justify-center max-w-3xl mx-auto">
             {[
+              "Photo Retouching",
+              "Vector Illustration",
+              "Motion Graphics",
+              "Brand Identity",
+              "Print Production",
               "Typography",
               "Color Theory",
-              "Brand Strategy",
-              "Print Design",
-              "Motion Graphics",
-              "Photography",
-              "Illustration",
-              "Design Systems",
+              "Layout Design",
             ].map((skill) => (
               <span
                 key={skill}

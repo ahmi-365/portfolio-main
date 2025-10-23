@@ -13,33 +13,52 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all fields before submitting.",
-        variant: "destructive",
-      });
-      return;
-    }
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Success message
+  if (!formData.name || !formData.email || !formData.message) {
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: "Missing Information",
+      description: "Please fill in all fields before submitting.",
+      variant: "destructive",
     });
+    return;
+  }
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-  };
+  // Success Toast – JSX in description (safe)
+  toast({
+    title: "Message Sent!",
+    description: (
+      <div className="flex items-center gap-2 mt-1">
+        <span className="text-green-400">Success</span>
+        Thank you, <strong>{formData.name}</strong>! I'll reply within 24 hours.
+      </div>
+    ),
+    duration: 5000,
+  });
+
+  setFormData({ name: "", email: "", message: "" });
+};
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "alex@portfolio.design", href: "mailto:alex@portfolio.design" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA", href: null },
+    { 
+      icon: Mail, 
+      label: "Email", 
+      value: "minahilfatima749@gmail.com", 
+      href: "mailto:minahilfatima749@gmail.com" 
+    },
+    { 
+      icon: Phone, 
+      label: "Phone", 
+      value: "+92 300 8390053", 
+      href: "tel:+923008390053" 
+    },
+    { 
+      icon: MapPin, 
+      label: "Location", 
+      value: "Okara, Pakistan", 
+      href: null 
+    },
   ];
 
   const socialLinks = [
@@ -73,7 +92,7 @@ const Contact = () => {
               {contactInfo.map((info) => {
                 const Icon = info.icon;
                 const content = (
-                  <div className="flex items-center glass rounded-lg p-4 hover-lift">
+                  <div className="flex items-center glass rounded-lg p-4 hover-lift transition-all">
                     <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center mr-4">
                       <Icon className="w-6 h-6 text-primary-foreground" />
                     </div>
@@ -85,7 +104,7 @@ const Contact = () => {
                 );
 
                 return info.href ? (
-                  <a key={info.label} href={info.href}>
+                  <a key={info.label} href={info.href} className="block">
                     {content}
                   </a>
                 ) : (
@@ -106,7 +125,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-lg glass flex items-center justify-center hover:bg-primary/10 transition-colors"
+                      className="w-12 h-12 rounded-lg glass flex items-center justify-center hover:bg-primary/10 transition-colors hover-lift"
                       aria-label={social.label}
                     >
                       <Icon className="w-5 h-5" />
@@ -127,10 +146,10 @@ const Contact = () => {
                 <Input
                   id="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Minahil Fatima"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="bg-input border-border"
+                  className="bg-input border-border focus:border-primary"
                 />
               </div>
 
@@ -141,10 +160,10 @@ const Contact = () => {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="minahil@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="bg-input border-border"
+                  className="bg-input border-border focus:border-primary"
                 />
               </div>
 
@@ -158,14 +177,14 @@ const Contact = () => {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="bg-input border-border resize-none"
+                  className="bg-input border-border focus:border-primary resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-secondary text-primary-foreground shadow-glow"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold shadow-glow transition-all"
               >
                 Send Message
                 <Send className="ml-2 w-5 h-5" />

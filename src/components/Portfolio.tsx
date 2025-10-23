@@ -1,11 +1,5 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
 
 interface PortfolioItem {
   id: number;
@@ -22,49 +16,72 @@ const Portfolio = () => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: "Brand Identity Design",
-      category: "Branding",
-      image: portfolio1,
-      description: "Complete brand identity package including logo, business cards, and brand guidelines for a sustainable lifestyle company.",
+      title: "Adobe Photoshop Mastery",
+      category: "Photo Editing",
+      // Fixed: Professional photo-editing workspace
+      image:
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Professional photo editing, retouching, and creative designs with precision. High-end composites, color grading, and flawless skin retouching for fashion and product photography.",
     },
     {
       id: 2,
-      title: "Mobile App UI/UX",
-      category: "UI/UX",
-      image: portfolio2,
-      description: "Modern and intuitive mobile application design focused on user experience and seamless interactions.",
+      title: "Adobe Illustrator Vectors",
+      category: "Vector Design",
+      // Fixed: Clean vector illustration on tablet
+      image:
+        "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Creative vector designs with precision for logos, icons, and more. Scalable illustrations and brand assets built with clean paths and vibrant gradients.",
     },
     {
       id: 3,
-      title: "Event Poster Collection",
-      category: "Print",
-      image: portfolio3,
-      description: "Series of bold and eye-catching event posters with dynamic typography and vibrant color schemes.",
+      title: "Cinematic Video Editing",
+      category: "Video Editing",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Engaging video edits with smooth transitions, effects, and professional polish. From social reels to brand promos — dynamic storytelling through motion.",
     },
     {
       id: 4,
-      title: "Product Packaging",
-      category: "Branding",
-      image: portfolio4,
-      description: "Elegant packaging design that combines minimalist aesthetics with sophisticated brand presentation.",
+      title: "Instagram & Social Media Pack",
+      category: "Social Media",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Attractive designs tailored for Instagram, Facebook, and online engagement. Ready-to-post carousels, stories, and feed templates that boost interaction.",
     },
     {
       id: 5,
-      title: "Website Design",
-      category: "UI/UX",
-      image: portfolio5,
-      description: "Clean and responsive website design with modern layouts and smooth user experience.",
+      title: "Logo & Flyer Branding Kit",
+      category: "Branding",
+      // Fixed: Branding mockup with logo sketches & business cards
+      image:
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Professional and unique logos & flyer designs that define your brand identity. Cohesive print-ready materials with bold typography and strategic layouts.",
     },
     {
       id: 6,
-      title: "Social Media Templates",
-      category: "Digital",
-      image: portfolio6,
-      description: "Engaging social media design templates for consistent brand presence across digital platforms.",
+      title: "Event Poster & Banner Series",
+      category: "Print Design",
+      image:
+        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&fit=crop&crop=entropy&cs=tinysrgb",
+      description:
+        "Bold, vibrant posters & banners crafted to capture attention and deliver messages. Large-format designs optimized for impact in real-world environments.",
     },
   ];
 
-  const categories = ["All", "Branding", "UI/UX", "Print", "Digital"];
+  const categories = [
+    "All",
+    "Photo Editing",
+    "Vector Design",
+    "Video Editing",
+    "Social Media",
+    "Branding",
+    "Print Design",
+  ];
 
   const filteredItems =
     activeFilter === "All"
