@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Deep Navy Blue - Primary background */
+    --background: 207 41% 21%;
+    --foreground: 0 0% 100%;
+
+    /* Card with subtle glassmorphism */
+    --card: 207 41% 26%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 207 41% 26%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Teal Blue - Primary accent */
+    --primary: 203 28% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Lighter teal for secondary elements */
+    --secondary: 203 28% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 207 20% 35%;
+    --muted-foreground: 203 15% 70%;
+
+    /* Teal accent variations */
+    --accent: 203 28% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 20% 35%;
+    --input: 207 20% 30%;
+    --ring: 203 28% 45%;
+
+    --radius: 0.75rem;
+    
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(207, 41%, 21%) 0%, hsl(203, 28%, 35%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(203, 28%, 45%) 0%, hsl(203, 28%, 55%) 100%);
+    --shadow-glow: 0 0 40px hsl(203 28% 45% / 0.3);
+    --shadow-card: 0 8px 32px hsl(207 41% 10% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Using same design for consistency - no dark mode toggle */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-card/40 backdrop-blur-md border border-white/10;
+  }
+  
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
