@@ -20,7 +20,7 @@ const Navbar = () => {
     { label: "Portfolio", href: "#portfolio" },
     { label: "Skills", href: "#skills" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
+    // { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
