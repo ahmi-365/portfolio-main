@@ -116,7 +116,7 @@ const Contact = () => {
 
   {/* Social Links */}
   <div>
-    {/* <p className="text-sm text-muted-foreground mb-4">Follow me on social media</p>
+    <p className="text-sm text-muted-foreground mb-4">Follow me on social media</p>
     <div className="flex gap-4 mb-6">
       {socialLinks.map((social) => {
         const Icon = social.icon;
@@ -133,7 +133,7 @@ const Contact = () => {
           </a>
         );
       })}
-    </div> */}
+    </div>
 
     {/* Small Google Map below social links */}
     <div className="rounded-2xl overflow-hidden shadow-md">
