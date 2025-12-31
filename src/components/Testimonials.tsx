@@ -5,19 +5,22 @@ const Testimonials = () => {
     {
       name: "Sarah Johnson",
       role: "CEO, TechStart Inc.",
-      content: "Alex transformed our brand identity completely. The creative vision and attention to detail exceeded all expectations. Our brand now truly reflects who we are.",
+      content:
+        "Minahil transformed our brand identity completely. The creative vision and attention to detail exceeded all expectations. Our brand now truly reflects who we are.",
       rating: 5,
     },
     {
       name: "Michael Chen",
       role: "Marketing Director, GrowthCo",
-      content: "Working with Alex was an absolute pleasure. The UI/UX designs were not only beautiful but also incredibly functional. Our conversion rates increased by 40%!",
+      content:
+        "Working with Minahil was an absolute pleasure. The UI/UX designs were not only beautiful but also incredibly functional. Our conversion rates increased by 40%!",
       rating: 5,
     },
     {
       name: "Emily Rodriguez",
       role: "Founder, Creative Studios",
-      content: "Alex's creative approach and professional execution are unmatched. Every project delivery was on time and beyond our expectations. Highly recommended!",
+      content:
+        "Minahil's creative approach and professional execution are unmatched. Every project delivery was on time and beyond our expectations. Highly recommended!",
       rating: 5,
     },
   ];
@@ -30,7 +33,8 @@ const Testimonials = () => {
             Client <span className="gradient-text">Testimonials</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take my word for it - here's what clients say about working with me
+            Don't just take my word for it - here's what clients say about
+            working with me
           </p>
         </div>
 
@@ -42,13 +46,10 @@ const Testimonials = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Quote className="w-12 h-12 text-primary mb-4 opacity-50" />
-              
+
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-primary text-primary"
-                  />
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
@@ -58,7 +59,9 @@ const Testimonials = () => {
 
               <div className="border-t border-border pt-4">
                 <p className="font-bold text-lg">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.role}
+                </p>
               </div>
             </div>
           ))}

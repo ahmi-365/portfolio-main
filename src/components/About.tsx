@@ -17,7 +17,7 @@ const About = () => {
             <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
               <img
                 src={designerPortrait}
-                alt="Alex Carter - Graphic Designer"
+                alt="Minahil - Graphic Designer"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -31,15 +31,16 @@ const About = () => {
               About <span className="gradient-text">Me</span>
             </h2>
             <p className="text-lg text-foreground/90 mb-6 leading-relaxed">
-              I'm a passionate graphic designer with over 8 years of experience in creating 
-              compelling visual narratives. My design philosophy centers on the belief that 
-              great design is not just about aesthetics—it's about telling stories that 
-              resonate with people.
+              I'm a passionate graphic designer with over 8 years of experience
+              in creating compelling visual narratives. My design philosophy
+              centers on the belief that great design is not just about
+              aesthetics—it's about telling stories that resonate with people.
             </p>
             <p className="text-lg text-foreground/90 mb-8 leading-relaxed">
-              From brand identities to digital experiences, I approach each project with 
-              fresh eyes and creative energy. My work has been featured in design publications 
-              and has helped businesses stand out in competitive markets.
+              From brand identities to digital experiences, I approach each
+              project with fresh eyes and creative energy. My work has been
+              featured in design publications and has helped businesses stand
+              out in competitive markets.
             </p>
 
             {/* Stats */}
@@ -55,23 +56,28 @@ const About = () => {
                     <p className="text-2xl font-bold gradient-text mb-1">
                       {stat.value}
                     </p>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </p>
                   </div>
                 );
               })}
             </div>
 
             <div className="flex flex-wrap gap-3">
-              {["Creative", "Detail-Oriented", "Collaborative", "Innovative"].map(
-                (trait) => (
-                  <span
-                    key={trait}
-                    className="px-4 py-2 glass rounded-full text-sm font-medium"
-                  >
-                    {trait}
-                  </span>
-                )
-              )}
+              {[
+                "Creative",
+                "Detail-Oriented",
+                "Collaborative",
+                "Innovative",
+              ].map((trait) => (
+                <span
+                  key={trait}
+                  className="px-4 py-2 glass rounded-full text-sm font-medium"
+                >
+                  {trait}
+                </span>
+              ))}
             </div>
           </div>
         </div>

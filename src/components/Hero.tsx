@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="gradient-text">Alex Carter</span>
+            Hi, I'm <span className="gradient-text">Minahil Hasnain</span>
           </h1>
           <p className="text-2xl md:text-3xl mb-8 text-muted-foreground font-heading font-semibold">
             Transforming Ideas into Visual Stories
